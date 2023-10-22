@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*", "webpack.config.ts"],
+  "exclude": ["node_modules"]
+}
