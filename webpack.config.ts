@@ -1,4 +1,5 @@
 import path from 'path';
+import 'webpack-dev-server';
 
 const config = (env: any, argv: any) => {
   const isProduction = argv.mode === "production"
@@ -15,6 +16,18 @@ const config = (env: any, argv: any) => {
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+    },
+    devServer: {
+      static: {
+        directory: path.resolve(__dirname, './dist'),
+      },
+      // it allow us use routing
+      historyApiFallback: {
+        index: 'index.html'
+      },
+      open: true, // open browser when server started 
+      hot: true, // enable Hot Module Replacement
+      port: 8080,
     }
   }
 };
