@@ -6,7 +6,6 @@
   "scripts": {
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "watch": "webpack --mode development --watch",
     "server": "webpack serve --open --mode development",
     "test": "jest"
   },
@@ -21,6 +20,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.4",
     "@types/webpack-dev-server": "^4.7.2",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
