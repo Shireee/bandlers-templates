@@ -22,9 +22,7 @@ const config = (env: any, argv: any) => {
         directory: path.resolve(__dirname, './dist'),
       },
       // it allow us use routing
-      historyApiFallback: {
-        index: 'index.html'
-      },
+      historyApiFallback: true,
       open: true, // open browser when server started 
       hot: true, // enable Hot Module Replacement
       port: 8080,
