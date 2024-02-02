@@ -16,7 +16,7 @@ module.exports = (env, argv) => {
             rules: [{test: /\.scss$/, use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader']}]
         },
           plugins: [new MiniCssExtractPlugin({filename: "styles/style.scss"}),
-                    new CopyPlugin({ patterns: [{ from: "./src/index.html", to: "./" }, { from: "./src/img/**", to: "./img", noErrorOnMissing: true }] })
+                    new CopyPlugin({ patterns: [{ from: "./src/index.html", to: "./" }, { from: 'img/**', to: './', context: 'src/', noErrorOnMissing: true }]})
           ],
         devServer: {
             static: {
