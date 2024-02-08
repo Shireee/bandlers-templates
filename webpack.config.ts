@@ -8,7 +8,7 @@ const config = (env: any, argv: any) => {
   return {
     entry: './src/index.tsx',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'docs'),
       filename: 'bundle.js',
     },
     module: {
@@ -20,11 +20,11 @@ const config = (env: any, argv: any) => {
     },
     devServer: {
       static: {
-        directory: path.resolve(__dirname, './dist'),
+        directory: path.resolve(__dirname, './docs'),
       },
-      historyApiFallback: true, // it allow us use routing
-      open: true, // open browser when server started 
-      hot: true, // enable Hot Module Replacement
+      historyApiFallback: true, 
+      open: true, 
+      hot: true, 
       port: 8080,
     },
     plugins: [
@@ -32,8 +32,9 @@ const config = (env: any, argv: any) => {
         patterns: [
           {
             from: path.resolve(__dirname, 'src', 'index.html'),
-            to: path.resolve(__dirname, 'dist'),
+            to: path.resolve(__dirname, 'docs'),
           },
+          {from: 'src/img', to: 'img'}
         ],
       }),
     ],
