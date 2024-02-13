@@ -34,7 +34,7 @@ const config = (env: any, argv: any) => {
             from: path.resolve(__dirname, 'src', 'index.html'),
             to: path.resolve(__dirname, 'docs'),
           },
-          {from: 'src/img', to: 'img'}
+          { from: 'img/**', to: './', context: 'src/', noErrorOnMissing: true }
         ],
       }),
     ],
