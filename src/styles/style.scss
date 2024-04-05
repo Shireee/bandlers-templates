@@ -1,3 +1,10 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
