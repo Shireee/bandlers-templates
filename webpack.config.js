@@ -39,7 +39,9 @@ module.exports = (env, argv) => {
           ]
       },
           plugins: [new MiniCssExtractPlugin({filename: "style/style.css"}),
-                    new CopyPlugin({ patterns: [{ from: "*.html", to: "./", context:'src/'}, { from: 'img/**', to: './', context: 'src/', noErrorOnMissing: true }]})
+                    new CopyPlugin({ patterns: [{ from: "*.html", to: "./", context:'src/'},
+                                                { from: 'img/**', to: './', context: 'src/', noErrorOnMissing: true },
+                                                { from: 'script/**', to: './', context: 'src/', noErrorOnMissing: true }]})
           ],
         devServer: {
             static: {
