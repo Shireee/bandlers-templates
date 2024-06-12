@@ -4,19 +4,18 @@
   "version": "0.0.1",
   "repository": "webdiscus/html-bundler-webpack-plugin",
   "license": "ISC",
-  "stackblitz": {
-    "startCommand": "npm start"
-  },
   "scripts": {
     "server": "webpack serve",
     "build-prod": "webpack build --mode=production",
-    "build": "webpack build --mode=development"
+    "build": "webpack build --mode=development",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md,json}\""
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
     "handlebars": "^4.7.8",
     "html-bundler-webpack-plugin": "^2.5.1",
     "image-webpack-loader": "^8.1.0",
+    "prettier": "3.3.2",
     "sass": "^1.64.2",
     "sass-loader": "^13.3.2",
     "webpack": "^5.88.2",
