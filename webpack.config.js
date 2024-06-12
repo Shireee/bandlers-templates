@@ -45,14 +45,39 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|jpe?g|webp)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'img/[name].[hash:8][ext]',
+            filename:  `${ isProduction ? 'img/[name][ext]' : 'img/[name].[hash:8][ext]' }`,
           },
+          use: [
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                disable: !isProduction,
+                mozjpeg: {
+                  progressive: true,
+                  quality: 75,
+                },
+                optipng: {
+                  enabled: true,
+                },
+                pngquant: {
+                  quality: [0.65, 0.90],
+                  speed: 4,
+                },
+                gifsicle: {
+                  interlaced: false,
+                },
+                webp: {
+                  quality: 75,
+                },
+              },
+            },
+          ]
         },
         {
           test: /\.(woff(2)?|ttf|eot|otf)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'fonts/[name][ext]',
+            filename:  `${ isProduction ? 'fonts/[name][ext]' : 'fonts/[name].[hash:8][ext]' }`,
           },
         }
       ],
