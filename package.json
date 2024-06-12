@@ -1,0 +1,25 @@
+{
+  "name": "handlebars",
+  "description": "Handlebars / Sass / JavaScript / Webpack",
+  "version": "0.0.1",
+  "repository": "webdiscus/html-bundler-webpack-plugin",
+  "license": "ISC",
+  "stackblitz": {
+    "startCommand": "npm start"
+  },
+  "scripts": {
+    "server": "webpack serve",
+    "build-prod": "webpack build --mode=production",
+    "build": "webpack build --mode=development"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "handlebars": "^4.7.8",
+    "html-bundler-webpack-plugin": "^2.5.1",
+    "sass": "^1.64.2",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
