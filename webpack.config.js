@@ -3,8 +3,7 @@ const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
-    console.log(isProduction);
-
+    
     return {
         output: {
             path: path.resolve(__dirname, 'docs'),
