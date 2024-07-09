@@ -3,12 +3,25 @@ const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
+    console.log(isProduction);
 
     return {
         output: {
             path: path.resolve(__dirname, 'docs'),
         },
-
+        stats: isProduction
+            ? {}
+            : {
+                  warnings: false,
+                  performance: false,
+              },
+        performance: isProduction
+            ? {}
+            : {
+                  hints: false,
+                  maxAssetSize: 512000,
+                  maxEntrypointSize: 512000,
+              },
         plugins: [
             new HtmlBundlerPlugin({
                 entry: 'src/pages/',
