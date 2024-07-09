@@ -1,4 +1,5 @@
 # Repository for bandler templates
-- **Gulp** - contains setup for common website layout
-- **Webpack-scss** - same, but with webpack
-- **Webpack-react-ts** - contain template for react.ts projects
+- **gulp** - contains setup for common website layout *legacy*
+- **webpack-scss** - same as gulp, but with webpack *good for small project* 
+- **webpack-react-ts** - contain template for react.ts projects
+- **webpack-hbs-scss** - bandler with template engine and formatter *good for big things, when u need reuse components*
